@@ -33,7 +33,9 @@ public class PolicyHandler {
             customerRegisteredE.toJson() +
             "\n\n"
         );
-
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("PolicyHandler.java PolicyHandler(PolicyHandler PolicyHandler)호출 ");
+        System.out.println("------------------------------------------------------------------------") ;	
         // Sample Logic //
         IncomeVerificationResultA.incomeVerify(event);
     }

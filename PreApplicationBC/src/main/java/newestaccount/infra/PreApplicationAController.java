@@ -18,4 +18,12 @@ public class PreApplicationAController {
     @Autowired
     PreApplicationARepository preApplicationARepository;
     // keep
+
+    // koj 20220621 PreApplicationAController 추가 
+    public PreApplicationAController () {
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("----PreApplicationAController.java PreApplicationAController   호출 ");
+        System.out.println("------------------------------------------------------------------------") ;
+ 
+    }
 }

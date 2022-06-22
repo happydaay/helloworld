@@ -14,6 +14,7 @@ public class PreAppliedE extends AbstractEvent {
     private String phoneNo;
     private String appliedStatus;
     private String custNo;
+    
     // keep
 
 }

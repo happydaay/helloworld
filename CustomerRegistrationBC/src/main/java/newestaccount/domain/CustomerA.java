@@ -28,16 +28,31 @@ public class CustomerA {
     public void onPostPersist() {
         CustomerRegisteredE customerRegisteredE = new CustomerRegisteredE(this);
         customerRegisteredE.publishAfterCommit();
+
+        System.out.println("-----고객생성-------------------------------------------------------------------") ;
+        System.out.println("----CustomerA.java onPostPersist 호출 ");
+        System.out.println("----POST 호출시 발생하는 거래 ");
+        System.out.println("------------------------------------------------------------------------") ;
     }
 
     public static CustomerARepository repository() {
         CustomerARepository customerARepository = CustomerRegistrationBcApplication.applicationContext.getBean(
             CustomerARepository.class
         );
+
+        System.out.println("-----고객생성-------------------------------------------------------------------") ;
+        System.out.println("----CustomerA.java CustomerARepository repository()  호출 ");
+        System.out.println("------------------------------------------------------------------------") ;
         return customerARepository;
     }
 
     public static void customerRegistP(PreAppliedE preAppliedE) {
+
+        System.out.println("-----고객생성-------------------------------------------------------------------") ;
+        System.out.println("----CustomerA.java  customerRegistP(PreAppliedE preAppliedE)호출 ");
+        System.out.println("----고객생성 Policy 호출시 발생 거래 ");
+        System.out.println("------------------------------------------------------------------------") ;
+        
         /** Example 1:  new item 
         CustomerA customerA = new CustomerA();
         repository().save(customerA);

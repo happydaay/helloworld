@@ -14,6 +14,9 @@ public class PreApplicationAHateoasProcessor
     public EntityModel<PreApplicationA> process(
         EntityModel<PreApplicationA> model
     ) {
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("---- PreApplicationAHateoasProcessor.java PreApplicationAHateoasProcessor EntityMode Override 호출 ");
+        System.out.println("------------------------------------------------------------------------") ;
         return model;
     }
 }

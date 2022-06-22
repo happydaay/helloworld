@@ -17,5 +17,10 @@ public class PreApplicationBcApplication {
     public static void main(String[] args) {
         applicationContext =
             SpringApplication.run(PreApplicationBcApplication.class, args);
+            System.out.println("------------------------------------------------------------------------") ;
+            System.out.println("----최초 프로그램  ");
+            System.out.println("----PreApplicationBcApplication.java PreApplicationBcApplication main() 호출 ");
+            System.out.println("------------------------------------------------------------------------") ;
+
     }
 }

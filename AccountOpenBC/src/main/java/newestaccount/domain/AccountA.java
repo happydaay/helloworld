@@ -2,6 +2,7 @@ package newestaccount.domain;
 
 import java.util.Date;
 import java.util.List;
+import java.io.*;
 import javax.persistence.*;
 import lombok.Data;
 import newestaccount.AccountOpenBcApplication;
@@ -28,9 +29,11 @@ public class AccountA {
 
     private String accountBalance;
 
+
+
     @PostPersist
     public void onPostPersist() {
-        AccountOpenedE accountOpenedE = new AccountOpenedE(this);
+        AccountOpenedE accountOpenedE = new AccountOpenedE(this);        
         accountOpenedE.publishAfterCommit();
         // Get request from PreApplicationA
         //newestaccount.external.PreApplicationA preApplicationA =

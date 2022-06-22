@@ -21,6 +21,13 @@ public class PreAppliedE extends AbstractEvent {
 
     public PreAppliedE() {
         super();
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("PreAppliedE.java PreAppliedE  이벤트 호출 ");
+        System.out.println("------------------------------------------------------------------------") ;
+
+        System.out.println("custNm => [%s]." + custNm);
+
+
     }
     // keep
 

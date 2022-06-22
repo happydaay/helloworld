@@ -14,5 +14,13 @@ public class CustomerRegisteredE extends AbstractEvent {
     private String phoneNo;
     private String custNo;
     // keep
+    
+    public CustomerRegisteredE () {
+
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("domain AccountOpenedE.java AccountOpenedE  이벤트 호출 ");
+        System.out.println("domain AccountOpenedE.java AccountOpenedE  이벤트 호출 " );
+        System.out.println("------------------------------------------------------------------------") ;
+    }    
 
 }

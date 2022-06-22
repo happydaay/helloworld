@@ -16,4 +16,11 @@ public class IncomeVerifiedE extends AbstractEvent {
     private Long appId;
     // keep
 
+    // koj 20220621   IncomeVerifiedE   이벤트 추가 
+    public IncomeVerifiedE(){
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("domain IncomeVerifiedE.java IncomeVerifiedE  이벤트 호출 ");
+        System.out.println("custNo => " + custNo + " verifyResult=> " + verifyResult + " incomeAmount=> " + incomeAmount + " phoneNo=> " + phoneNo + " appId=> " + appId );
+        System.out.println("------------------------------------------------------------------------") ;
+    }
 }

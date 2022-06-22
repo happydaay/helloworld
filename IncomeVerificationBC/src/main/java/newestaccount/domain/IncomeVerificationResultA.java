@@ -29,6 +29,10 @@ public class IncomeVerificationResultA {
     @PostPersist
     public void onPostPersist() {
         IncomeVerifiedE incomeVerifiedE = new IncomeVerifiedE(this);
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("IncomeVerificationResultA.java statusUpdateP(incomeVerifiedE )호출 ");
+        System.out.println("------------------------------------------------------------------------") ;	
+
         incomeVerifiedE.publishAfterCommit();
     }
 
@@ -36,10 +40,17 @@ public class IncomeVerificationResultA {
         IncomeVerificationResultARepository incomeVerificationResultARepository = IncomeVerificationBcApplication.applicationContext.getBean(
             IncomeVerificationResultARepository.class
         );
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("IncomeVerificationResultA.java statusUpdateP(IncomeVerificationResultARepository)호출 ");
+        System.out.println("------------------------------------------------------------------------") ;	
+
         return incomeVerificationResultARepository;
     }
-
+     
     public static void incomeVerify(CustomerRegisteredE customerRegisteredE) {
+        System.out.println("------------------------------------------------------------------------") ;
+        System.out.println("IncomeVerificationResultA.java statusUpdateP(incomeVerify)호출 ");
+        System.out.println("------------------------------------------------------------------------") ;	
         /** Example 1:  new item 
         IncomeVerificationResultA incomeVerificationResultA = new IncomeVerificationResultA();
         repository().save(incomeVerificationResultA);

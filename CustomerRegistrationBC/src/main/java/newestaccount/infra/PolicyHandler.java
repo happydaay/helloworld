@@ -28,6 +28,12 @@ public class PolicyHandler {
     ) {
         if (!preAppliedE.validate()) return;
         PreAppliedE event = preAppliedE;
+
+        System.out.println("-----고객생성-------------------------------------------------------------------") ;
+        System.out.println("----PolicyHandler.java  wheneverPreAppliedE_CustomerRegistP( @Payload PreAppliedE preAppliedE) 호출 ");
+        System.out.println("----사전등록 이벤트  ->고객등록 Policy 호출시 발생  ");
+        System.out.println("------------------------------------------------------------------------") ;
+
         System.out.println(
             "\n\n##### listener CustomerRegistP : " +
             preAppliedE.toJson() +

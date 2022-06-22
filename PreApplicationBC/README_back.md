@@ -1,9 +1,8 @@
-# PreApplicationBC TEST
+# PreApplicationBC
 
 ## Running in local development environment
 
 ```
-cd /home/project/capstone-team/newestaccount/PreApplicationBC  
 mvn spring-boot:run
 ```
 
@@ -11,11 +10,8 @@ mvn spring-boot:run
 
 ```
 mvn package -B -DskipTests
-##docker build -t username/PreApplicationBC:v1 .
-docker build -t kwontrio/preapplicationbc:v1 .
-
-##docker run username/PreApplicationBC:v1
-docker run kwontrio/preapplicationbc:v1
+docker build -t username/PreApplicationBC:v1 .
+docker run username/PreApplicationBC:v1
 ```
 
 ## Push images and running in Kubernetes
@@ -24,8 +20,7 @@ docker run kwontrio/preapplicationbc:v1
 docker login 
 # in case of docker hub, enter your username and password
 
-##docker push username/PreApplicationBC:v1
-docker push kwontrio/preapplicationbc:v1
+docker push username/PreApplicationBC:v1
 ```
 
 Edit the deployment.yaml under the /kubernetes directory:
@@ -52,9 +47,7 @@ kubectl get pods -l app=PreApplicationBC
 If you have no problem, you can connect to the service by opening a proxy between your local and the kubernetes by using this command:
 ```
 # new terminal
-#kubectl port-forward deploy/PreApplicationBC 8080:8080
-kubectl port-forward deploy/preapplicationbc 8091:8080
-
+kubectl port-forward deploy/PreApplicationBC 8080:8080
 
 # another terminal
 http localhost:8080

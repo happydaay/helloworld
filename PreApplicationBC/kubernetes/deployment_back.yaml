@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: preapplicationbc
+  name: PreApplicationbc
   labels:
     app: PreApplicationBC
 spec:
@@ -15,8 +15,8 @@ spec:
         app: PreApplicationBC
     spec:
       containers:
-        - name: preapplicationbc
-          image: kwontrio/preapplicationbc:latest
+        - name: PreApplicationBC
+          image: kwontrio/preapplicationBC:latest
           ports:
             - containerPort: 8080
           readinessProbe:
